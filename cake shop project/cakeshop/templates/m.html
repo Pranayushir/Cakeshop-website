@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cakes Basket | Menu page</title>
+    <style>
+        /* Style for the menu cards to display horizontally */
+        .menu-card {
+            display: inline-block;
+            width: 250px; /* Adjust the width as needed */
+            margin: 10px; /* Adjust the margin as needed */
+            border: 1px solid #ccc; /* Add a border for separation */
+            padding: 10px;
+            text-align: center;
+        }
+        .menu-card img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    {% for x in hi %}
+    <div>
+        <img src='{{x.img}}' style="width:200px">
+        {% for y in x.value %}
+            <p>{{y}}</p>
+        {% endfor %}
+        {% for y in x.price %}
+            <p>price = {{y}}</p>
+            
+        {% endfor %}
+        <a href = "{% url 'add_to_cart' item_id=x.pk %}"> Add to cart </a>
+        <br>
+        <br>
+    </div>
+    {% endfor %}
+</body>
+</html>

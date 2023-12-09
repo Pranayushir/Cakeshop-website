@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Payment</title>
+</head>
+<body>
+    <h1>Upload Your Photo</h1>
+    <img src="" alt="Image Placeholder" width="300" height="200">
+    <br>
+    <h1> Bank Account Details</h1>
+    <p>
+        <strong>Bank Account Number:</strong>
+        <span>73894693281234</span> <!-- Replace with the actual account number -->
+    </p>
+    <p>
+        <strong>IFSC Code:</strong>
+        <span>ABCD0123456</span> <!-- Replace with the actual IFSC code -->
+    </p>
+    <br>
+    <form action="{% url 'payment'%}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+         
+        <label for="photo">Select a photo to upload:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+        
+        <a href = "{% url 'payment' %}"></a>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>

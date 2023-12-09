@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for the page */
+        body {
+            background-color: #D69D71;
+        }
+        .contact-container {
+            text-align: center;
+            padding: 40px;
+        }
+        .cake-image {
+            float: right;
+            margin: 20px;
+            border: 5px solid #f8d0b2;
+            border-radius: 50%;
+        }
+        .contact-info {
+            padding: 20px;
+            text-align: left;
+        }
+        h1{font-size: 5rem;
+        color: #f4cbab;}
+        #h3 {font-size: 3rem;}
+
+        #ip1 {background-color: #f8d0b2;
+        border: #f8d0b2;
+        height: 40px;
+        width: 225px;
+    
+        border-radius: 18px;}
+
+        #ip2 {background-color: #f8d0b2;
+        border: #f8d0b2;
+        height: 40px;
+        width: 225px;
+        border-radius: 18px;}
+
+        #ip101 {background-color: #f8d0b2;
+        border: #f8d0b2;
+        width: 225px;
+        border-radius: 18px;}
+
+        #ip102 {background-color: black;
+            color: #D69D71;
+        border: #f8d0b2;
+        font-size: 1.3rem;
+        text-align: center;
+        width: 225px;
+        height: 40px;
+    
+        border-radius: 18px;}
+
+        ::placeholder{color: black;
+        text-align: center;}
+
+        
+        
+        
+    </style>
+</head>
+<body>
+    
+<section id="contactus">
+    <div class="container">
+        
+
+
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+            <h2 class="float-start mb-5 mt-5" style="font-weight: bold; " style="margin-left: 0%; font-weight: 3rem;">THE CAKE BASKET</h2>
+        
+          <a class="nav-link fw-bold py-2 px-5 mt-5 " href="/home/" style="text-decoration: none; margin-left: 100px ;color: black; font-weight: bold;">Home</a>
+          <a class="nav-link fw-bold py-2 px-5 mt-5" href="/menu/" style="text-decoration: none; margin-left: 50px ;color: black; font-weight: bold">Menu</a>
+          <a class="nav-link fw-bold py-2 px-5 mt-5" href="/about/" style="text-decoration: none; margin-left: 50px ;;color: black; font-weight: bold">About</a>
+          <a class="nav-link fw-bold py-2 px-5 mt-5" href="/contact/" style="text-decoration: none; margin-left: 50px ; color: black; font-weight: bold">Contact</a>
+        </nav>
+             <!--   <div class="contact-container">
+                    <h1>Contact Us</h1>
+                
+        </div>-->
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-container">
+                    <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="contact-info">
+                        <p class="h3"><h2>How Can We Help?</h2></p>
+                        
+                        <p class="t">
+                            <input type="email" id="ip2" name="email" placeholder="name@example.com" style="text-align: center">
+                        </p>
+                        
+                        <p class="t" >
+                            <input type="textarea"  id="ip1"  name="name" placeholder="ex. alex cameroon" style="text-align: center">
+                        </p>
+
+                        <p class="t">
+                           <textarea name="message" id="ip101" placeholder="enter you message" cols="23" rows="5" style="text-align: center"></textarea>
+                        </p>
+
+                        <p><button type="submit" id="ip102">Send Message</button> </p>
+                    </div>
+                </div>
+            </div>
+        </form>
+            <div class="col-md-6">
+                <img src="/static/contact.jpg" alt="Cake Image" class="img-fluid cake-image">
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Add Bootstrap JS and jQuery (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

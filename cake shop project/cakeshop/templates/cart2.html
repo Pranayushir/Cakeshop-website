@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+</head>
+<body>
+    <h1>Cart</h1>
+    <ul>
+       {% for item in items %}
+            <li>{{ item.name }} - ${{ item.price }}</li>
+            <img src='{{item.image}}' >
+        {% endfor %}
+        {% comment %} style="width:200px" {% endcomment %}
+    </ul>
+    {{tot}}
+    <a href = "{% url 'payment' %}">
+    <input type="submit" value="submit">
+
+    {% comment %} html here {% endcomment %}
+
+
+</body>
+</html>
+
+{% comment %} 
+{% comment %} {% comment %} {% comment %} {% comment %} {% comment %} {% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
+    <style>
+        h1{font-size: 5rem;}
+
+
+        .col-md-8{border-radius:10px;
+        
+        width:100px;}
+
+
+        .card mb-3{
+            border-radius: 200px;
+        }
+        
+    </style>
+</head>
+<body style="background-color: #ffe1b6">
+    <div class="container text-center mt-4">
+        <!--<h1>CART</h1>-->
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+            <h2 class="float-start mb-5 mt-5" style="font-weight: bold; " style="margin-left: 0%; font-weight: 3rem;">THE CAKE BASKET</h2>
+        
+          <a class="nav-link fw-bold py-2 px-5 mt-5 " href="./home.html" style="text-decoration: none; margin-left: 100px ;color: black; font-weight: bold;">Home</a>
+          <a class="nav-link fw-bold py-2 px-5 mt-5" href="./pricing1.html" style="text-decoration: none; margin-left: 50px ;color: black; font-weight: bold">Menu</a>
+          <a class="nav-link fw-bold py-2 px-5 mt-5" href="./aboutus.html" style="text-decoration: none; margin-left: 50px ;;color: black; font-weight: bold">About</a>
+          <a class="nav-link fw-bold py-2 px-5 mt-5" href="./contactus.html" style="text-decoration: none; margin-left: 50px ; color: black; font-weight: bold">Contact</a>
+        </nav>
+    </div>
+    <div class="container mt-4"  style="width:75%" >  <!-- width is change to 75-->
+        <div class="row">
+            <div class="col-md-8" >
+
+                <div class="card mb-3"style="border-radius:50px;">  <!-- br is chnge-->
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="./c1.jpg" class="card-img" alt="Cake 1" style="border-radius:50px;" >  <!-- br is chnge-->
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Strawberry</h5>
+                                <p class="card-text">Price: $10.00</p>
+                                <p class="card-text">Quantity: 2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} <div class="card mb-3" style="border-radius:50px;" >  <!-- br is chnge-->
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="./c2.jpg" class="card-img" alt="Cake 2" style="border-radius:50px;">  <!-- br is chnge-->
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Cake 2</h5>
+                                <p class="card-text">Price: $15.00</p>
+                                <p class="card-text">Quantity: 1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="border-radius:50px;"> <!-- br is chnge-->
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="./c3.jpg" class="card-img" alt="Cake 3" style="border-radius:50px;"> <!-- br is chnge-->
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Cake 3</h5>
+                                <p class="card-text">Price: $12.00</p>
+                                <p class="card-text">Quantity: 3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="border-radius:50px;">    <!-- br is chnge-->
+                    <div class="card-body">
+                        <h5 class="card-title">Total</h5>
+                        <p class="card-text">Subtotal: $74.00</p>
+                        <p class="card-text">Tax (7%): $5.18</p>
+                        <p class="card-text">Total Amount: $79.18</p>
+                        <a href="./payment.html" class="btn btn-primary btn-block">Payment</a>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+        {% comment %} </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>  {% endcomment %}
